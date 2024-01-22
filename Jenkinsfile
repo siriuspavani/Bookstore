@@ -61,12 +61,12 @@ pipeline {
 	stage('Slack Notification') {
 	    steps {
 	        slackSend(
-	            channel: 'book-jenkins',
+	            channel: 'jenkins-syncup',
 	            color: '439FE0',
 	            message: "Job '${env.JOB_NAME}' build #${env.BUILD_NUMBER} - Your book store application deployed successfully!",
-	            teamDomain: 'konalms',
-	            tokenCredentialId: 'slack',
-	            username: 'jenkins'
+	            teamDomain: 'siriuslync',
+	            tokenCredentialId: 'slackuser',
+	            username: 'slackuser'
 	        )
 	    }
 	}
